@@ -1,93 +1,92 @@
-# desafio-fpf-tech-henriqueannicchino
+# challenge-fpf-tech-henriqueannicchino
 
 
-Solução do desafio prático do processo seletivo da FPF Tech
+Solution to the practical challenge of the FPF Tech selection process
 
-A aplicação consiste em:
- - Jogo em turnos, onde o usuário primeiro deve inserir seu nome de jogador
- - Ranking dos jogadores com as pontuações em ordem decrescente
-    (o jogador é adiciando ao ranking após vencer uma partida)
+The application consists of:
+ - Turn-based game, where the user must first enter his player name
+ - Player ranking with scores in descending order (the player is added to the ranking after winning a match)
 
-Recursos adicionais:
-    - Inimigo pode ficar atortoado no turno sequinte a um ataque especial
-    - Mudança da cor na barra de vida de acordo com os pontos de vida restantes
-    - Log de ações do jogador e do Inimigo em cada turno
-	- O Jogo possui animações de ataque, dano e morte do personagem
+Additional Resources:
+    - Enemy can be stunned the turn following a special attack
+    - Change the color of the life bar according to the remaining life points
+    - Log of player and enemy actions each turn
+	- The game has character attack, damage and death animations
 	
 
-# Tecnologias utilizadas
+# Technologies used
 
-## Banco de dados
+## Database
 - MongoDB
 
-## Back end
+## Backend
 - JavaScript
 - NodeJS
 - Express
 - Mongoose
 
-## Front end
+## Frontend
 - TypeScript
 - Angular
 - HTML
 - Scss
 
-# Como executar o projeto 
+# How to execute the project 
 
-## Utilizando Docker Compose
+## Using Docker Compose
 
-Pré-requisitos: [Docker Engine]
+Prerequisites: [Docker Engine]
 
 ```bash
-# clonar repositório
-git clone https://gitlab.com/henriqueannicchino/desafio-fpf-tech-henriqueannicchino.git
+# clone repository
+git clone https://github.com/henriqueannicchino/FPF_tech_challenge.git
 
-# Executar na pasta raiz do projeto no modo root
+# Run in the project root folder in root mode
 docker-compose up
 ```
 
-Após a ativação dos containers, os subprojetos podem ser acessados localmente:
+After activating the containers, the subprojects can be accessed locally:
 
-- Front End: http://localhost:4200
-- Back End: http://localhost:5000
+- Frontend: http://localhost:4200
+- Backend: http://localhost:5000
 
-# Executando manualmente
+# Running manually
 
-# Pré-requisitos possuir mongo atlas ou conectar com mongo local
-### Para usar mongo atlas 
-- crie um arquivo .env na pasta backend
-- dentro do arquivo insira CONNECTION_URL = "Sua URL Mongo Atlas"
-- para definir a porta que deseja executar o backend insira PORT = "numero da porta" exemplo PORT = 5000
-- descomentar linha de conexão com atlas e comentar a de conexão local em server.js
+# Prerequisites: have mongo atlas or connect with mongo local
+### To use mongo atlas
+- create a .env file in the backend folder
+- inside the file insert CONNECTION_URL = "Your Mongo Atlas URL"
+- to define the port you want to run the backend enter PORT = "port number" example PORT = 5000
+- uncomment the atlas connection line and comment out the local connection line in server.js
 
-# Para usar mongo local
+# To use local mongo
 ### Crie um container mongo
 - docker-compose up mongodb
 
 
 ## Backend
 
-# entrar na pasta do projeto backend
+# enter the backend project folder
 cd backend
 
-# instalar dependências
+# install dependencies
 npm install
 
-# executar o projeto
+# execute the project
 npm start
 
 ## Frontend
 
-# entrar na pasta do projeto frontend
+# enter the frontend project folder
 cd frontend
 
-# instalar dependências
+# install dependencies
 npm install
 
-# executar o projeto
+# execute the project
 ng serve
 
-# Autor
+# Author
 
 [Luis Henrique Matos Sales](https://www.linkedin.com/in/luis-henrique-211aaa1b6/)
 
