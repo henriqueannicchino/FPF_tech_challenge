@@ -1,0 +1,96 @@
+.gameScreen {
+    position: relative;
+    background-image: url("../../assets/images/Battleground.png");
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.charactersInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.characterInfo {
+    width: 20%;
+    margin: 10;
+}
+
+.characterInfo h4 {
+    color: #c1c1c1;
+}
+
+.logs {
+    padding-left: 10px;
+}
+
+.lifeBarBox {
+    height: 20px;
+    border: 1px solid #000;
+}
+
+.lifeBar {
+    height: 100%;
+    text-align: left;
+}
+
+.heroPosition {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+}
+
+.enemyPosition {
+    position: absolute;
+    left: 52%;
+    top: 50%;
+}
+
+.playerActionsBox {
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+    width: 100%;
+}
+
+.playerActionsBox h3 {
+    color: #c1c1c1;
+}
+
+.playerActions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.enemyStunned {
+    color: rgba(239,170,40,255);
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: rgba(219, 219, 219, 0.6);
+    border: 2px inset #6b6b6b;
+    width: 30vw;
+	height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.quitOptions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

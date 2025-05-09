@@ -1,0 +1,57 @@
+<div class="gameRulesPage">
+    <section class="card"> 
+        <span>1- Este é um jogo por turnos onde cada turno compõe de uma interação do jogador e uma do inimigo.</span>
+        <div>
+            <span>2- O jogador possui quatro ações sendo elas:</span>
+            <ul>
+                <li>Ataque Básico: O jogador irá causar um dano no inimigo que será reduzido dos pontos de vida do mesmo, 
+                    deve ser um valor aleatório entre 5 e 10. 
+                </li>
+                <li>
+                    Ataque Especial:
+                    <ul>
+                        <li>
+                            O jogador irá causar um dano no inimigo que será reduzido dos pontos de vida do mesmo, deve ser 
+                            um valor aleatório entre 10 e 20.
+                        </li>
+                        <li>
+                            O ataque especial necessita de no mínimo 2 turnos após utilização e deverá estar desabilitado 
+                            enquanto não carregado, ou seja, o botão não pode ser acionado por 2 turnos após sua utilização. 
+                        </li>
+                        <li>
+                            Ao acionar o ataque especial o inimigo tem 50% de chance de não atacar no próximo turno, 
+                            e deve ser apresentado um indicativo de que o inimigo está atordoado.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Curar: O jogador receberá um aumento nos seus pontos de vida que deverá ser um valor randômico entre 5 e 15.
+                </li>
+                <li>
+                    Desistir O jogo deverá ser terminado e ir para tela de inicio do jogo.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <span>3- O inimigo possui apenas duas ações sendo elas:</span>
+            <ul>
+                <li>Ataque Básico: O inimigo irá causar um dano no jogador que será reduzido dos pontos de vida do mesmo, deve ser 
+                    um valor aleatório entre 6 e 12.  
+                </li>
+                <li>
+                    Ataque Especial:
+                    <ul>
+                        <li>
+                            O inimigo irá causar um dano no jogador que será reduzido dos pontos de vida do mesmo, deve ser 
+                            um valor aleatório entre 8 e 16.  
+                        </li>
+                        <li>
+                            O ataque especial do inimigo deverá ser acionado automaticamente a cada 3 turnos. 
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <button class="buttonMenu leftDown" (click)="goBack()">Voltar</button>
+</div>

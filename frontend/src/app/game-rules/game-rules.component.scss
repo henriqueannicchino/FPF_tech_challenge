@@ -1,0 +1,50 @@
+.gameRulesPage {
+    position: relative;
+    background-image: url("../../assets/images/background_menu.png");
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: rgba(255,255,255, 0.4);
+    width: 60vw;
+	height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.leftDown {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+@media screen and (max-width: 1100px) {
+    .card {
+        font-size: 80%;
+        width: 70vw;
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        font-size: 60%;
+        width: 80vw;
+        height: 80vh;
+    }
+}

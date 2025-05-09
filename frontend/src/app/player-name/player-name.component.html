@@ -1,0 +1,10 @@
+<div class="playerNamePage"> 
+    <form class="card">
+        <h1>Insira o nome do Jogador</h1>
+        <input type="text" name="playerName" [(ngModel)]="playerName" class="playerNameInput" placeholder="nome">            
+        <button class="buttonGreen" (click)="savePlayerName()" *ngIf="playerName!==''; else noName">Continuar</button>
+        <ng-template #noName>
+            <button class="buttonGreenDisabled" disabled>Continuar</button>
+        </ng-template>
+    </form>
+</div>

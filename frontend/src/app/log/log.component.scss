@@ -1,0 +1,63 @@
+.logBox {
+    width: 25%;
+    height: 50vh;
+    background-color: black;
+    border: 2px inset #6b6b6b;
+    color: #F5F5F5;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.logBoxScrollBar::-webkit-scrollbar-track {   
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.logBoxScrollBar::-webkit-scrollbar {
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.logBoxScrollBar::-webkit-scrollbar-thumb {
+	background-color: #8e640b;
+}
+
+.logBox div {
+    margin-bottom: 5px;
+}
+
+.logItemTurn {
+    text-align: center;
+    background-color: rgba(133,133,133,255);
+}
+
+.logItemEnemyAttack {
+    text-align: right;
+    padding-right: 2px;
+    background-color: rgba(217,124,125,255);
+}
+
+.logItemEnemyStunned {
+    text-align: right;
+    padding-right: 2px;
+    background-color: rgba(239,170,40,255);
+}
+
+.logItemAttack {
+    text-align: left;
+    padding-left: 2px;
+    background-color: rgba(98,117,181,255);
+}
+
+.logItemEspecialAttack {
+    text-align: left;
+    padding-left: 2px;
+    background-color: rgba(180,181,104,255);
+}
+
+.logItemCure {
+    text-align: left;
+    padding-left: 2px;
+    background-color: rgba(98,180,109,255);
+}

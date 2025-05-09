@@ -1,0 +1,71 @@
+<div class="gameScreen">
+    <section class="charactersInfo">
+        <div class='characterInfo'>
+            <h4>{{playerName}}</h4>
+            <div class="lifeBarBox">
+                <div class="lifeBar" [ngStyle]="{'width': heroLife+'%', 'backgroundColor': heroLife >= 50 ? 'green' : heroLife >= 20 ? 'yellow' : 'red'}">
+                    <span>{{heroLife}}%</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="enemyStunned" [ngStyle]="{'display': enemyStunned===true ? 'block': 'none'}">Inimigo atordoado</h2>
+
+        <div class='characterInfo'>
+            <h4>Dark Wraith</h4>
+            <div class="lifeBarBox">
+                <div class="lifeBar" [ngStyle]="{'width': enemyLife+'%', 'backgroundColor': enemyLife >= 50 ? 'green' : enemyLife >= 20 ? 'yellow' : 'red'}">
+                    <span>{{enemyLife}}%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="logs">
+        <app-log #childapplog [setEndOfGame]='endOfGame' (logEvent)="updateTurn($event)"></app-log>
+    </div>
+
+    <div class="heroPosition">
+        <app-hero #childapphero [setPlayerName]='playerName' (heroEvent)="receiveData($event)"></app-hero>
+    </div>
+
+    <div class="enemyPosition">
+        <app-enemy [setPlayerTurn]='playerTurn' (enemyEvent)="receiveData($event)"></app-enemy>
+    </div>
+
+    <section class="playerActionsBox">
+        <h3>Comandos</h3>
+        <div class="playerActions" *ngIf="!victory && !defeated && playerTurn; else blockedButtons">
+            <button class="buttonActionBlue" (click)="childapphero.basicAttack()">Ataque</button>
+            <button 
+                [ngClass]="especialCount === 0 ? 'buttonActionRed': 'buttonActionRedDisabled'" 
+                [disabled]="especialCount !== 0"
+                (click)="childapphero.especialAttack()">Ataque Especial</button>
+            <button class="buttonGreen" (click)="childapphero.cure()">Curar</button>
+            <button class="buttonActionPurple" (click)="openQuitCard()">Desistir</button>
+        </div>
+        <ng-template #blockedButtons>
+            <div class="playerActions">
+                <button class="buttonActionBlueDisabled" disabled>Ataque</button>
+                <button class="buttonActionRedDisabled" disabled>Ataque Especial</button>
+                <button class="buttonGreenDisabled" disabled>Curar</button>
+                <button class="buttonActionPurpleDisabled" disabled>Desistir</button>
+            </div>
+        </ng-template>
+    </section>
+
+    <section class="card" *ngIf="victory === true || defeated === true"> 
+        <h2>{{victory === true ? "Parabéns você venceu" : "Você foi derrotado!"}}</h2>
+        <span>Sua Pontuação: {{ score }}</span>
+        <button class="buttonGreen" name="ranking" (click)="changePage($event)">Ir para ranking</button>
+    </section>
+
+    <section class="card" *ngIf="quitCardOpen === true"> 
+        <h2>Você tem certeza?</h2>
+        <span>Se você optar por desistir sua pontuação não será salva.</span>
+        <div class="quitOptions">
+            <button class="buttonGreen" (click)="closeQuitCard()">Cancelar</button>
+            <button class="buttonActionRed" name="quit" (click)="changePage($event)">Sair</button>
+        </div>
+    </section>
+</div>
