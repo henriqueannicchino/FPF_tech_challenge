@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mongodb: 
+    image: mongo
+    container_name: mongo_database
+    ports: 
+      - 27017:27017
+    restart: unless-stopped
+    
+  
+  backend:
+    image: fpf-tech-challenge-backend
+    build: backend
+    ports:
+      - 5000:5000
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+    restart: unless-stopped
+
+  frontend:
+    image: fpf-tech-challenge-frontend
+    build: frontend
+    ports:
+      - 4200:80
